@@ -13,7 +13,7 @@ public class CalcularPeriodo {
 		
 	}
 	
-	public static void calcularPeriodo(String nombre, LocalDate fecha) {
+	public static String calcularPeriodo(String nombre, LocalDate fecha) {
         
         LocalDate fechaActual = LocalDate.now();
         Period periodo = Period.between(fecha, fechaActual);
@@ -23,9 +23,9 @@ public class CalcularPeriodo {
         int meses = periodo.getMonths();
         int dias = periodo.getDays();
         
-        String texto = String.format(nombre + " ocurrió hace %d años, %d meses y %d días.", anyos, meses, dias);
+        String texto = String.format(nombre + " ocurrio hace %d a�os, %d meses y %d dias.", anyos, meses, dias);
          
-        System.out.println(texto);
+        return texto;
     }
  
 }
